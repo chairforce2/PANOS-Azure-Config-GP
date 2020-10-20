@@ -1,0 +1,601 @@
+<?xml version="1.0"?>
+<config version="9.1.0" urldb="paloaltonetworks">
+  <mgt-config>
+    <users>
+      <entry name="admin">
+        <phash>*</phash>
+        <permissions>
+          <role-based>
+            <superuser>yes</superuser>
+          </role-based>
+        </permissions>
+      </entry>
+      <entry name="paloalto">
+        <phash>$1$pwjsfmpe$puA35qtaz7sEctG.e0mvU0</phash>
+        <permissions>
+          <role-based>
+            <superuser>yes</superuser>
+          </role-based>
+        </permissions>
+      </entry>
+    </users>
+    <password-complexity>
+      <enabled>yes</enabled>
+      <minimum-length>8</minimum-length>
+    </password-complexity>
+  </mgt-config>
+  <shared>
+    <application/>
+    <application-group/>
+    <service/>
+    <service-group/>
+    <botnet>
+      <configuration>
+        <http>
+          <dynamic-dns>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </dynamic-dns>
+          <malware-sites>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </malware-sites>
+          <recent-domains>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </recent-domains>
+          <ip-domains>
+            <enabled>yes</enabled>
+            <threshold>10</threshold>
+          </ip-domains>
+          <executables-from-unknown-sites>
+            <enabled>yes</enabled>
+            <threshold>5</threshold>
+          </executables-from-unknown-sites>
+        </http>
+        <other-applications>
+          <irc>yes</irc>
+        </other-applications>
+        <unknown-applications>
+          <unknown-tcp>
+            <destinations-per-hour>10</destinations-per-hour>
+            <sessions-per-hour>10</sessions-per-hour>
+            <session-length>
+              <maximum-bytes>100</maximum-bytes>
+              <minimum-bytes>50</minimum-bytes>
+            </session-length>
+          </unknown-tcp>
+          <unknown-udp>
+            <destinations-per-hour>10</destinations-per-hour>
+            <sessions-per-hour>10</sessions-per-hour>
+            <session-length>
+              <maximum-bytes>100</maximum-bytes>
+              <minimum-bytes>50</minimum-bytes>
+            </session-length>
+          </unknown-udp>
+        </unknown-applications>
+      </configuration>
+      <report>
+        <topn>100</topn>
+        <scheduled>yes</scheduled>
+      </report>
+    </botnet>
+    <certificate>
+      <entry name="PANOS_Example_CA">
+        <subject-hash>abffd062</subject-hash>
+        <issuer-hash>abffd062</issuer-hash>
+        <not-valid-before>Oct 20 04:13:16 2020 GMT</not-valid-before>
+        <issuer>/CN=PANOS_Example_CA/C=US/emailAddress=kyle.a.pawlak@gmail.com</issuer>
+        <not-valid-after>Oct 20 04:13:16 2021 GMT</not-valid-after>
+        <common-name>PANOS_Example_CA</common-name>
+        <expiry-epoch>1634703196</expiry-epoch>
+        <ca>yes</ca>
+        <subject>/CN=PANOS_Example_CA/C=US/emailAddress=kyle.a.pawlak@gmail.com</subject>
+        <public-key>-----BEGIN CERTIFICATE-----
+MIIDjDCCAnSgAwIBAgIBATANBgkqhkiG9w0BAQsFADBQMRkwFwYDVQQDDBBQQU5P
+U19FeGFtcGxlX0NBMQswCQYDVQQGEwJVUzEmMCQGCSqGSIb3DQEJARYXa3lsZS5h
+LnBhd2xha0BnbWFpbC5jb20wHhcNMjAxMDIwMDQxMzE2WhcNMjExMDIwMDQxMzE2
+WjBQMRkwFwYDVQQDDBBQQU5PU19FeGFtcGxlX0NBMQswCQYDVQQGEwJVUzEmMCQG
+CSqGSIb3DQEJARYXa3lsZS5hLnBhd2xha0BnbWFpbC5jb20wggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCWdBLIxjU8YI8P2jL2igNqDhP7lP8r0zh0s0f4
+Hcd5Jf1QZTQ0/fbOKTavuBoekdRjOJSF7uo00R8a6SH9Lc8U5h+S2itGxFVpq/B2
+fpKR8TEYIF4ADehJJrKE9OFiOm/uNZyv1s15omGHERzYn/ZrXETp9otKIE2EwnV6
+VC5H93M2Xg1JyXyVvQc1gQ1Au7atIktqcifX5tSdGmXUt84SDv0/iaHUW6syR1Gx
+gPKnT72pfcNsW/b5zR9Xp7FDktm+3/vBil6DCkXfuE6pgd/5nMbCEonF3Qf8FEc+
+ePnGpkPiegsT2OzmvFIwDdGb2ysrp2nN+1QHlS/TCpkS5STbAgMBAAGjcTBvMA8G
+A1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgKkMEwGA1UdJQEB/wRCMEAGCCsG
+AQUFBwMEBggrBgEFBQcDAgYIKwYBBQUHAwEGCCsGAQUFBwMDBgcrBgEFAgMEBgcr
+BgEFAgMFBgRVHSUAMA0GCSqGSIb3DQEBCwUAA4IBAQBTwv9dMGmKbF65HXoCpTRY
+eFXiOp1K+bsXlqq+/o8heEJ9/Ufc+6JUE86M/z/B6EP1dU0bPmcj5A1IvXC1Ivk4
+ylkN/R+KjqQkTlCHCAw5aGRwdNILtsgelFI9vnuS/N3T/Dd+ytWy4kig9yVE/U0i
+I7VIxUmEk85QN5rBQhDRZldCNfKN/x2oTiBq5QNg9Ceec2pGcaeHKaMg0Mvc5nx9
+rKQ7MLzaPJyJR+qNHbj2CpLzYynvtl2FjMlzW1UjDr5I9z6FxGIQrbPlTIVr1LF2
+7h6uPW+BI/CrcZ6XtSwJFJZDTxZyEr6Va6Rt+h5xKbf+nVyajwyELAGcjkk4Kmb9
+-----END CERTIFICATE-----
+</public-key>
+        <algorithm>RSA</algorithm>
+        <private-key>-AQ==/HbavskJql7Ss7WxBLf0qCA9UQw=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</private-key>
+      </entry>
+      <entry name="52.157.19.47">
+        <subject-hash>d940b7d9</subject-hash>
+        <issuer-hash>abffd062</issuer-hash>
+        <not-valid-before>Oct 20 04:22:28 2020 GMT</not-valid-before>
+        <issuer>/CN=PANOS_Example_CA/C=US/emailAddress=kyle.a.pawlak@gmail.com</issuer>
+        <not-valid-after>Oct 20 04:22:28 2021 GMT</not-valid-after>
+        <common-name>52.157.19.47</common-name>
+        <expiry-epoch>1634703748</expiry-epoch>
+        <ca>no</ca>
+        <subject>/CN=52.157.19.47/C=US/emailAddress=kyle.a.pawlak@gmail.com</subject>
+        <public-key>-----BEGIN CERTIFICATE-----
+MIIDpjCCAo6gAwIBAgIBAjANBgkqhkiG9w0BAQsFADBQMRkwFwYDVQQDDBBQQU5P
+U19FeGFtcGxlX0NBMQswCQYDVQQGEwJVUzEmMCQGCSqGSIb3DQEJARYXa3lsZS5h
+LnBhd2xha0BnbWFpbC5jb20wHhcNMjAxMDIwMDQyMjI4WhcNMjExMDIwMDQyMjI4
+WjBMMRUwEwYDVQQDDAw1Mi4xNTcuMTkuNDcxCzAJBgNVBAYTAlVTMSYwJAYJKoZI
+hvcNAQkBFhdreWxlLmEucGF3bGFrQGdtYWlsLmNvbTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAOLPVCiMV1dkS6+hWTAJmoTCZgoiGkaoFpfI3kQff4tg
+gITzPReP+NLqlZ8GlRjDPWFfp0xSf2CqOu3GPFuMccNA8fPdmbUjpHZe6S59yf5U
+/D+WeBpo1U/lNicrgsfDoM1rEBFZqvrN+qIcyPyriJHwZyPa1XPZ/P7J8iOlmtW2
+2je9/8VmT96eySLhU4heafTvpN1XuGDDsunyeqDscAh0WAtfMe66gvG0ppyzeTq1
+gHxWco94y88c8OO2x0t494S1EGh+uJ+mt4xdXSNV473vSfI4tTk71Hz0rlwRGZcx
+y+zJpvcz2thO9tPtXZ0lk6eI3S8sTuJC167JggymA7kCAwEAAaOBjjCBizAOBgNV
+HQ8BAf8EBAMCBaAwTAYDVR0lAQH/BEIwQAYIKwYBBQUHAwQGCCsGAQUFBwMCBggr
+BgEFBQcDAQYIKwYBBQUHAwMGBysGAQUCAwQGBysGAQUCAwUGBFUdJQAwKwYDVR0R
+AQH/BCEwH4EXa3lsZS5hLnBhd2xha0BnbWFpbC5jb22HBDSdEy8wDQYJKoZIhvcN
+AQELBQADggEBAHDEK38AsdDszsx6Cxa/9Ru4cLQJU+tKyBEhWcNiIXYJjuSc7Aui
+4u1LhRJb4egxe73jJa+KWQhBctkaC3U7GaXsJNY0k7oBmNS2k7VYmP9pJnOakwQV
+AC/NWJESCh5LH9/3k5a0EwU5jAs6Rojke2A3TuCEuCkAhFA3qvFHa3yrC2R688an
+4EIEjb5gumWqwKl/jsS9yan/+BxDQxCrQUnSLDYSerCbQWPBNLmFb632mRZzx/fy
+Ck4zd2/KRP8qX6fD4m+STUOpF8JmquMe7tS3GSStc654h+jko68YRXhnxGTA6wWe
+BkcpdXdRTNTN+u8wdF0fiJPvP59HD6VBvhk=
+-----END CERTIFICATE-----
+</public-key>
+        <algorithm>RSA</algorithm>
+        <private-key>-AQ==yZwv4eC9d3+/fcu0YHhOqLSJBY4=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</private-key>
+      </entry>
+    </certificate>
+    <ssl-tls-service-profile>
+      <entry name="Management_Int">
+        <protocol-settings>
+          <min-version>tls1-0</min-version>
+          <max-version>max</max-version>
+        </protocol-settings>
+        <certificate>52.157.19.47</certificate>
+      </entry>
+    </ssl-tls-service-profile>
+    <certificate-profile>
+      <entry name="PANOS_Example_CA">
+        <CA>
+          <entry name="PANOS_Example_CA"/>
+        </CA>
+      </entry>
+    </certificate-profile>
+  </shared>
+  <devices>
+    <entry name="localhost.localdomain">
+      <network>
+        <interface>
+          <ethernet>
+            <entry name="ethernet1/1">
+              <layer3>
+                <ndp-proxy>
+                  <enabled>no</enabled>
+                </ndp-proxy>
+                <interface-management-profile>allow_ping</interface-management-profile>
+                <lldp>
+                  <enable>no</enable>
+                </lldp>
+                <dhcp-client/>
+              </layer3>
+            </entry>
+            <entry name="ethernet1/2">
+              <layer3>
+                <ndp-proxy>
+                  <enabled>no</enabled>
+                </ndp-proxy>
+                <interface-management-profile>allow_ping</interface-management-profile>
+                <lldp>
+                  <enable>no</enable>
+                </lldp>
+                <dhcp-client/>
+              </layer3>
+            </entry>
+          </ethernet>
+        </interface>
+        <profiles>
+          <monitor-profile>
+            <entry name="default">
+              <interval>3</interval>
+              <threshold>5</threshold>
+              <action>wait-recover</action>
+            </entry>
+          </monitor-profile>
+          <interface-management-profile>
+            <entry name="allow_ping">
+              <ping>yes</ping>
+            </entry>
+          </interface-management-profile>
+        </profiles>
+        <ike>
+          <crypto-profiles>
+            <ike-crypto-profiles>
+              <entry name="default">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                  <member>3des</member>
+                </encryption>
+                <hash>
+                  <member>sha1</member>
+                </hash>
+                <dh-group>
+                  <member>group2</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-128">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                </encryption>
+                <hash>
+                  <member>sha256</member>
+                </hash>
+                <dh-group>
+                  <member>group19</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-256">
+                <encryption>
+                  <member>aes-256-cbc</member>
+                </encryption>
+                <hash>
+                  <member>sha384</member>
+                </hash>
+                <dh-group>
+                  <member>group20</member>
+                </dh-group>
+                <lifetime>
+                  <hours>8</hours>
+                </lifetime>
+              </entry>
+            </ike-crypto-profiles>
+            <ipsec-crypto-profiles>
+              <entry name="default">
+                <esp>
+                  <encryption>
+                    <member>aes-128-cbc</member>
+                    <member>3des</member>
+                  </encryption>
+                  <authentication>
+                    <member>sha1</member>
+                  </authentication>
+                </esp>
+                <dh-group>group2</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-128">
+                <esp>
+                  <encryption>
+                    <member>aes-128-gcm</member>
+                  </encryption>
+                  <authentication>
+                    <member>none</member>
+                  </authentication>
+                </esp>
+                <dh-group>group19</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+              <entry name="Suite-B-GCM-256">
+                <esp>
+                  <encryption>
+                    <member>aes-256-gcm</member>
+                  </encryption>
+                  <authentication>
+                    <member>none</member>
+                  </authentication>
+                </esp>
+                <dh-group>group20</dh-group>
+                <lifetime>
+                  <hours>1</hours>
+                </lifetime>
+              </entry>
+            </ipsec-crypto-profiles>
+            <global-protect-app-crypto-profiles>
+              <entry name="default">
+                <encryption>
+                  <member>aes-128-cbc</member>
+                </encryption>
+                <authentication>
+                  <member>sha1</member>
+                </authentication>
+              </entry>
+            </global-protect-app-crypto-profiles>
+          </crypto-profiles>
+        </ike>
+        <qos>
+          <profile>
+            <entry name="default">
+              <class-bandwidth-type>
+                <mbps>
+                  <class>
+                    <entry name="class1">
+                      <priority>real-time</priority>
+                    </entry>
+                    <entry name="class2">
+                      <priority>high</priority>
+                    </entry>
+                    <entry name="class3">
+                      <priority>high</priority>
+                    </entry>
+                    <entry name="class4">
+                      <priority>medium</priority>
+                    </entry>
+                    <entry name="class5">
+                      <priority>medium</priority>
+                    </entry>
+                    <entry name="class6">
+                      <priority>low</priority>
+                    </entry>
+                    <entry name="class7">
+                      <priority>low</priority>
+                    </entry>
+                    <entry name="class8">
+                      <priority>low</priority>
+                    </entry>
+                  </class>
+                </mbps>
+              </class-bandwidth-type>
+            </entry>
+          </profile>
+        </qos>
+        <virtual-router>
+          <entry name="default">
+            <protocol>
+              <bgp>
+                <enable>no</enable>
+                <dampening-profile>
+                  <entry name="default">
+                    <cutoff>1.25</cutoff>
+                    <reuse>0.5</reuse>
+                    <max-hold-time>900</max-hold-time>
+                    <decay-half-life-reachable>300</decay-half-life-reachable>
+                    <decay-half-life-unreachable>900</decay-half-life-unreachable>
+                    <enable>yes</enable>
+                  </entry>
+                </dampening-profile>
+                <routing-options>
+                  <graceful-restart>
+                    <enable>yes</enable>
+                  </graceful-restart>
+                </routing-options>
+              </bgp>
+              <rip>
+                <enable>no</enable>
+              </rip>
+              <ospf>
+                <enable>no</enable>
+              </ospf>
+              <ospfv3>
+                <enable>no</enable>
+              </ospfv3>
+            </protocol>
+            <interface>
+              <member>ethernet1/1</member>
+              <member>ethernet1/2</member>
+            </interface>
+            <ecmp>
+              <algorithm>
+                <ip-modulo/>
+              </algorithm>
+            </ecmp>
+            <routing-table>
+              <ip>
+                <static-route>
+                  <entry name="Internet">
+                    <nexthop>
+                      <ip-address>10.0.1.1</ip-address>
+                    </nexthop>
+                    <bfd>
+                      <profile>None</profile>
+                    </bfd>
+                    <path-monitor>
+                      <enable>no</enable>
+                      <failure-condition>any</failure-condition>
+                      <hold-time>2</hold-time>
+                    </path-monitor>
+                    <interface>ethernet1/1</interface>
+                    <metric>10</metric>
+                    <destination>0.0.0.0/0</destination>
+                    <route-table>
+                      <unicast/>
+                    </route-table>
+                  </entry>
+                  <entry name="Internal">
+                    <bfd>
+                      <profile>None</profile>
+                    </bfd>
+                    <path-monitor>
+                      <enable>no</enable>
+                      <failure-condition>any</failure-condition>
+                      <hold-time>2</hold-time>
+                    </path-monitor>
+                    <interface>ethernet1/2</interface>
+                    <metric>10</metric>
+                    <destination>10.0.2.0/24</destination>
+                    <route-table>
+                      <unicast/>
+                    </route-table>
+                  </entry>
+                </static-route>
+              </ip>
+            </routing-table>
+          </entry>
+        </virtual-router>
+      </network>
+      <deviceconfig>
+        <system>
+          <type>
+            <dhcp-client>
+              <send-hostname>yes</send-hostname>
+              <send-client-id>no</send-client-id>
+              <accept-dhcp-hostname>no</accept-dhcp-hostname>
+              <accept-dhcp-domain>no</accept-dhcp-domain>
+            </dhcp-client>
+          </type>
+          <update-server>updates.paloaltonetworks.com</update-server>
+          <update-schedule>
+            <threats>
+              <recurring>
+                <weekly>
+                  <day-of-week>wednesday</day-of-week>
+                  <at>01:02</at>
+                  <action>download-only</action>
+                </weekly>
+              </recurring>
+            </threats>
+          </update-schedule>
+          <timezone>US/Pacific</timezone>
+          <service>
+            <disable-telnet>yes</disable-telnet>
+            <disable-http>yes</disable-http>
+          </service>
+          <hostname>vmseries-fw-vm1</hostname>
+          <ssl-tls-service-profile>Management_Int</ssl-tls-service-profile>
+          <fqdn-refresh-time>60</fqdn-refresh-time>
+          <dns-setting>
+            <servers>
+              <primary>8.8.8.8</primary>
+              <secondary>1.1.1.1</secondary>
+            </servers>
+          </dns-setting>
+          <ntp-servers>
+            <primary-ntp-server>
+              <ntp-server-address>0.pool.ntp.org</ntp-server-address>
+              <authentication-type>
+                <none/>
+              </authentication-type>
+            </primary-ntp-server>
+            <secondary-ntp-server>
+              <ntp-server-address>1.pool.ntp.org</ntp-server-address>
+              <authentication-type>
+                <none/>
+              </authentication-type>
+            </secondary-ntp-server>
+          </ntp-servers>
+          <permitted-ip>
+            <entry name="76.102.37.180"/>
+            <entry name="199.167.52.5">
+              <description>PAN ca-gp gateway</description>
+            </entry>
+          </permitted-ip>
+        </system>
+        <setting>
+          <config>
+            <rematch>yes</rematch>
+          </config>
+          <management>
+            <hostname-type-in-syslog>FQDN</hostname-type-in-syslog>
+            <initcfg>
+              <type>
+                <dhcp-client>
+                  <send-hostname>yes</send-hostname>
+                  <send-client-id>no</send-client-id>
+                  <accept-dhcp-hostname>no</accept-dhcp-hostname>
+                  <accept-dhcp-domain>no</accept-dhcp-domain>
+                </dhcp-client>
+              </type>
+              <hostname>vmseries-fw-vm1</hostname>
+              <username>paloalto</username>
+            </initcfg>
+            <secure-conn-client>
+              <certificate-type>
+                <local>
+                  <certificate>52.157.19.47</certificate>
+                  <certificate-profile>PANOS_Example_CA</certificate-profile>
+                </local>
+              </certificate-type>
+            </secure-conn-client>
+          </management>
+        </setting>
+      </deviceconfig>
+      <vsys>
+        <entry name="vsys1">
+          <application/>
+          <application-group/>
+          <zone>
+            <entry name="Untrust">
+              <network>
+                <layer3>
+                  <member>ethernet1/1</member>
+                </layer3>
+              </network>
+              <enable-user-identification>yes</enable-user-identification>
+            </entry>
+            <entry name="Trust">
+              <network>
+                <layer3>
+                  <member>ethernet1/2</member>
+                </layer3>
+              </network>
+              <enable-user-identification>yes</enable-user-identification>
+            </entry>
+          </zone>
+          <service/>
+          <service-group/>
+          <schedule/>
+          <rulebase>
+            <security>
+              <rules>
+                <entry name="Allow_Trust_to_Untrust" uuid="1eb1b634-996c-42cb-8657-892738b84589">
+                  <to>
+                    <member>Untrust</member>
+                  </to>
+                  <from>
+                    <member>Trust</member>
+                  </from>
+                  <source>
+                    <member>any</member>
+                  </source>
+                  <destination>
+                    <member>any</member>
+                  </destination>
+                  <source-user>
+                    <member>any</member>
+                  </source-user>
+                  <category>
+                    <member>any</member>
+                  </category>
+                  <application>
+                    <member>any</member>
+                  </application>
+                  <service>
+                    <member>application-default</member>
+                  </service>
+                  <hip-profiles>
+                    <member>any</member>
+                  </hip-profiles>
+                  <action>allow</action>
+                </entry>
+              </rules>
+            </security>
+          </rulebase>
+          <import>
+            <network>
+              <interface>
+                <member>ethernet1/1</member>
+                <member>ethernet1/2</member>
+              </interface>
+            </network>
+          </import>
+        </entry>
+      </vsys>
+    </entry>
+  </devices>
+</config>
